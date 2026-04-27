@@ -1,15 +1,6 @@
 <!-- CURSOR -->
-<div
-  class="cursor"
-  [class.big]="cursorBig"
-  [style.left.px]="cursorX"
-  [style.top.px]="cursorY"
-></div>
-<div
-  class="cursor-trail"
-  [style.left.px]="trailX"
-  [style.top.px]="trailY"
-></div>
+<div #cursor class="cursor" [class.big]="cursorBig" style="left: -100px; top: -100px"></div>
+<div #trail class="cursor-trail" [style.left.px]="trailX" [style.top.px]="trailY"></div>
 
 <!-- AMBIENT BG ORBS -->
 <div class="lightning-bg"></div>
@@ -23,9 +14,7 @@
   (mouseleave)="onHoverInteractive(false)"
   title="Toggle ambient audio"
 >
-  <div class="bars">
-    <span></span><span></span><span></span><span></span>
-  </div>
+  <div class="bars"><span></span><span></span><span></span><span></span></div>
   <span>{{ audioOn ? 'playing' : 'ambient' }}</span>
 </button>
 

@@ -1,4 +1,13 @@
-import { Component, OnInit, OnDestroy, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  HostListener,
+  Inject,
+  PLATFORM_ID,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { AudioService } from './shared/services/audio.service';
 import { HomeComponent } from './core/pages/home/home';
@@ -11,11 +20,12 @@ import { HomeComponent } from './core/pages/home/home';
   styleUrl: './app.scss',
 })
 export class AppComponent implements OnInit, OnDestroy {
-  cursorX = -100;
-  cursorY = -100;
+  cursorBig = false;
   trailX = -100;
   trailY = -100;
-  cursorBig = false;
+
+  @ViewChild('cursor') cursorEl?: ElementRef<HTMLDivElement>;
+  @ViewChild('trail') trailEl?: ElementRef<HTMLDivElement>;
 
   get audioOn() {
     return this.audio.isOn;
@@ -32,8 +42,12 @@ export class AppComponent implements OnInit, OnDestroy {
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(e: MouseEvent) {
-    this.cursorX = e.clientX;
-    this.cursorY = e.clientY;
+    // Update cursor position directly on DOM for real-time tracking
+    if (this.cursorEl) {
+      this.cursorEl.nativeElement.style.left = e.clientX + 'px';
+      this.cursorEl.nativeElement.style.top = e.clientY + 'px';
+    }
+
     clearTimeout(this.trailTimeout);
     this.trailTimeout = setTimeout(() => {
       this.trailX = e.clientX;
