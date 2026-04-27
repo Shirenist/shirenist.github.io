@@ -1,0 +1,19 @@
+<div class="minigame-wrap">
+  <h3>Thunder Deflect</h3>
+  <p>// move your cursor to deflect the bolt. don't let it hit the ground.</p>
+
+  <div class="canvas-wrap">
+    <canvas
+      #gameCanvas
+      width="620"
+      height="220"
+      (mousemove)="onMouseMove($event)"
+      (touchmove)="onTouchMove($event)"
+    ></canvas>
+    <div class="score-bar">
+      <span>score <em>{{ score }}</em></span>
+      <span>lives <em>{{ lives }}</em></span>
+      <span class="status">{{ status }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+.minigame-wrap {
+  position: relative;
+
+  &::after {
+    content: 'MINI GAME';
+    position: absolute;
+    top: 0; right: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .3em;
+    color: var(--thunder3);
+  }
+
+  h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 13px;
+    color: var(--text-dim);
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 24px;
+  }
+}
+
+.canvas-wrap {
+  width: 100%;
+  max-width: 620px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--border);
+  background: #030508;
+  cursor: none;
+}
+
+.score-bar {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: .1em;
+
+  em {
+    font-style: normal;
+    color: var(--thunder2);
+  }
+
+  .status {
+    color: var(--text-dim);
+    font-style: italic;
+  }
+}
