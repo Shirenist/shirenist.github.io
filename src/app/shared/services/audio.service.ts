@@ -1,23 +1,22 @@
 import { Injectable } from '@angular/core';
+import { PitchShift, Player, start } from 'tone';
 
 @Injectable({ providedIn: 'root' })
 export class AudioService {
-  private bg = new Audio('assets/audio/bg-2.mp3');
-  private click = new Audio('assets/audio/click.mp3');
-  private reveal = new Audio('assets/audio/reveal.mp3');
-
+  private bg = new Player('assets/audio/bg-2.mp3').toDestination();
+  private click = new Player('assets/audio/click.mp3').toDestination();
+  private reveal = new Player('assets/audio/reveal.mp3').toDestination();
   private on = true;
-  private unlocked = true;
 
   constructor() {
     this.bg.loop = true;
-    this.bg.volume = 0.1;
-    this.click.volume = 0.4;
-    this.reveal.volume = 0.25;
+    this.bg.volume.value = -25;
 
-    // Attempt autoplay on page load
+    this.click.volume.value = 0;
+    this.reveal.volume.value = 0;
+
     if (this.on) {
-      this.bg.play().catch(() => {});
+      this.bg.autostart = true;
     }
   }
 
@@ -26,22 +25,21 @@ export class AudioService {
   }
 
   toggle(): boolean {
-    this.unlocked = true;
     this.on = !this.on;
-    if (this.on) this.bg.play().catch(() => {});
-    else this.bg.pause();
+    start().then(() => {
+      if (this.on) this.bg.start();
+      else this.bg.stop();
+    });
     return this.on;
   }
 
   playClick() {
     if (!this.on) return;
-    this.click.currentTime = 0;
-    this.click.play().catch(() => {});
+    start().then(() => this.click.stop().start());
   }
 
   playReveal() {
     if (!this.on) return;
-    this.reveal.currentTime = 0;
-    this.reveal.play().catch(() => {});
+    start().then(() => this.reveal.stop().start());
   }
 }

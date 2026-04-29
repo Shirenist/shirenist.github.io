@@ -597,6 +597,7 @@ section#finale {
   background: linear-gradient(135deg, var(--frost) 0%, var(--accent) 100%);
   border: none;
   padding: 16px 40px;
+  border-radius: 25px 25px 25% 25%;
   cursor: none;
   transition:
     transform 0.3s,
