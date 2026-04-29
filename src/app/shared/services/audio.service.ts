@@ -15,20 +15,9 @@ export class AudioService {
     this.click.volume = 0.4;
     this.reveal.volume = 0.25;
 
-    // Attempt autoplay
+    // Attempt autoplay on page load
     if (this.on) {
-      this.bg.play().catch(() => {
-        // Autoplay blocked - wait for first user interaction
-        const startAudio = () => {
-          this.bg.play().catch(() => {});
-          document.removeEventListener('click', startAudio);
-          document.removeEventListener('mousemove', startAudio);
-          document.removeEventListener('keydown', startAudio);
-        };
-        document.addEventListener('click', startAudio, { once: true });
-        document.addEventListener('mousemove', startAudio, { once: true });
-        document.addEventListener('keydown', startAudio, { once: true });
-      });
+      this.bg.play().catch(() => {});
     }
   }
 
