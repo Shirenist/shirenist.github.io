@@ -6,8 +6,8 @@ export class AudioService {
   private click = new Audio('assets/audio/click.mp3');
   private reveal = new Audio('assets/audio/reveal.mp3');
 
-  private on = false;
-  private unlocked = false;
+  private on = true;
+  private unlocked = true;
 
   constructor() {
     this.bg.loop = true;
