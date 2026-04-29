@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class AudioService {
-  private bg = new Audio('assets/audio/bg.webm');
+  private bg = new Audio('assets/audio/bg-2.mp3');
   private click = new Audio('assets/audio/click.mp3');
   private reveal = new Audio('assets/audio/reveal.mp3');
 
@@ -11,7 +11,7 @@ export class AudioService {
 
   constructor() {
     this.bg.loop = true;
-    this.bg.volume = 0.18;
+    this.bg.volume = 0.1;
     this.click.volume = 0.4;
     this.reveal.volume = 0.25;
 

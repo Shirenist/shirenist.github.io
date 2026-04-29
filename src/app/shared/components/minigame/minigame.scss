@@ -2,27 +2,29 @@
   position: relative;
 
   &::after {
-    content: 'MINI GAME';
+    content: 'INTERACTIVE';
     position: absolute;
-    top: 0; right: 0;
+    top: 0;
+    right: 0;
     font-family: 'JetBrains Mono', monospace;
     font-size: 9px;
-    letter-spacing: .3em;
-    color: var(--thunder3);
+    letter-spacing: 0.3em;
+    color: var(--frost-dim);
   }
 
   h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
     color: var(--white);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 
   p {
-    font-size: 13px;
-    color: var(--text-dim);
-    font-family: 'JetBrains Mono', monospace;
-    margin-bottom: 24px;
+    font-size: 14px;
+    color: var(--text-mid);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 28px;
   }
 }
 
@@ -35,7 +37,7 @@ canvas {
   display: block;
   width: 100%;
   border: 1px solid var(--border);
-  background: #030508;
+  background: rgba(10, 14, 26, 0.8);
   cursor: none;
 }
 
@@ -46,11 +48,11 @@ canvas {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   color: var(--text-dim);
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 
   em {
     font-style: normal;
-    color: var(--thunder2);
+    color: var(--frost);
   }
 
   .status {

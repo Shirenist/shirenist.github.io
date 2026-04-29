@@ -1,153 +1,242 @@
 <main>
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span class="footer-sig"> Shirenist <span>·</span> hand-crafted with care</span>
+    <span class="footer-mono">© 2025 · made with angular + scss</span>
+  </footer>
 
-  <!-- ── HERO ── -->
-  <section id="hero">
-    <p class="hero-eyebrow">est. somewhere in eastern europe</p>
-    <h1 class="hero-name">Shiren<span>ist</span></h1>
-    <p class="hero-tagline">
-      Builder of tools. Keeper of communities.<br>Occasional conqueror of virtual kingdoms.
-    </p>
-    <div class="hero-divider">
-      <span>scroll to explore</span>
+  <!-- ── PERSONAL REFLECTION ── -->
+  <section id="finale">
+    <div class="finale-video-bg">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="finale-video"
+        poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%230a0e1a' width='1920' height='1080'/%3E%3C/svg%3E"
+      >
+        <source src="assets/video/finale.mp4" type="video/mp4" />
+        <source src="assets/video/finale.webm" type="video/webm" />
+      </video>
+      <div class="finale-overlay"></div>
     </div>
-    <div class="hero-scroll-hint">
-      <div class="scroll-line"></div>
-      <span>below</span>
-    </div>
-  </section>
 
-  <!-- ── ABOUT ── -->
-  <section id="about">
-    <div appReveal>
-      <p class="section-label">01 — About</p>
-      <h2 class="section-title">Who is this</h2>
-    </div>
-    <p class="section-body reveal delay-1" appReveal>
-      Developer. Tinkerer. Clan member. I build things that make communities run smoother —
-      dashboards, automation, tools that solve the small problems nobody else bothers to solve.
-    </p>
-    <p class="section-body" appReveal>
-      When I'm not writing TypeScript or staring at network logs, I'm somewhere on a medieval
-      battlefield or managing a catastrophically unlucky colony on a rimworld.
-    </p>
-  </section>
-
-  <!-- ── STACK ── -->
-  <section id="stack">
-    <div appReveal>
-      <p class="section-label">02 — Stack</p>
-      <h2 class="section-title">What I work with</h2>
-    </div>
-    <div class="tag-grid" appReveal>
-      <span class="tag highlight">Angular</span>
-      <span class="tag highlight">TypeScript</span>
-      <span class="tag highlight">Node.js</span>
-      <span class="tag highlight">Express</span>
-      <span class="tag">Discord API</span>
-      <span class="tag">RxJS</span>
-      <span class="tag">PostgreSQL</span>
-      <span class="tag">Git</span>
-      <span class="tag">Linux</span>
-      <span class="tag">Docker</span>
-      <span class="tag">REST APIs</span>
-      <span class="tag">Nginx</span>
-    </div>
-  </section>
-
-  <!-- ── PROJECTS ── -->
-  <section id="projects">
-    <div appReveal>
-      <p class="section-label">03 — Work</p>
-      <h2 class="section-title">Things I've built</h2>
-    </div>
-    <div class="project-list">
-      <div class="project-item" appReveal>
-        <div>
-          <div class="project-name">BMM — Bannerlord Member Manager</div>
-          <div class="project-desc">Full-stack clan management dashboard. Discord integration, attendance tracking, analytics, streak calculations.</div>
-        </div>
-        <span class="project-tag">active</span>
+    <div class="finale-content">
+      <div class="finale-text-group">
+        <p class="finale-reveal reveal-1">This journey started with an idea</p>
+        <p class="finale-reveal reveal-2">
+          Build things that matter. Build for people, with intention.
+        </p>
       </div>
-      <div class="project-item" appReveal>
-        <div>
-          <div class="project-name">This page</div>
-          <div class="project-desc">Angular-powered personal profile. Deployed on GitHub Pages. The one you're looking at right now.</div>
-        </div>
-        <span class="project-tag">live</span>
-      </div>
-      <div class="project-item" appReveal>
-        <div>
-          <div class="project-name">Home Network Setup</div>
-          <div class="project-desc">TP-Link AX5400, DNS over HTTPS via Quad9, QoS tuning, multi-stage well water filtration. Yes, I consider this a project.</div>
-        </div>
-        <span class="project-tag">ongoing</span>
-      </div>
-    </div>
-  </section>
 
-  <!-- ── CLAN ── -->
-  <section id="clan">
-    <div appReveal>
-      <p class="section-label">04 — Clan</p>
-      <h2 class="section-title">Where I ride</h2>
-    </div>
-    <div class="clan-card" appReveal>
-      <div class="clan-name">Kara<span>tuğ</span></div>
-      <div class="clan-sub">Mount &amp; Blade II: Bannerlord · Multiplayer Clan</div>
-      <p class="clan-body">
-        Part of the Karatuğ clan — a tight-knit group of players who take coordinated multiplayer
-        seriously. I also build and maintain the internal tooling that keeps the roster organised.
-      </p>
-    </div>
-  </section>
+      <div class="finale-cta">
+        <p class="finale-reveal reveal-5">Let's build something extraordinary together.</p>
 
-  <!-- ── GAMES ── -->
-  <section id="games">
-    <div appReveal>
-      <p class="section-label">05 — Games</p>
-      <h2 class="section-title">The library</h2>
-    </div>
-    <div appReveal>
-      <div class="game-row">
-        <span class="game-num">I</span>
-        <span class="game-title">Mount &amp; Blade II: Bannerlord</span>
-        <span class="game-note">clan warfare, medieval chaos</span>
-      </div>
-      <div class="game-row">
-        <span class="game-num">II</span>
-        <span class="game-title">RimWorld</span>
-        <span class="game-note">catastrophic colony management</span>
+        <a
+          href="https://github.com/shirenist"
+          class="finale-link-btn"
+          target="_blank"
+          rel="noopener"
+        >
+          Start a conversation
+        </a>
       </div>
     </div>
   </section>
 
   <!-- ── MINIGAME ── -->
   <section id="minigame" appReveal>
+    <div appReveal style="margin-bottom: 32px">
+      <p class="section-label">Interactive</p>
+      <h2 class="section-title">Play something</h2>
+    </div>
     <app-minigame />
   </section>
 
-  <!-- ── LINKS ── -->
-  <section id="links">
+  <!-- ── GAMES & CLAN ── -->
+  <section id="games">
     <div appReveal>
-      <p class="section-label">06 — Find me</p>
-      <h2 class="section-title">Connect</h2>
+      <p class="section-label">Lifestyle</p>
+      <h2 class="section-title">Games & Communities</h2>
     </div>
+
+    <div appReveal>
+      <p style="margin-bottom: 40px; color: var(--text-mid)">
+        When I'm not coding, I'm deeply invested in community-driven gaming and virtual
+        world-building.
+      </p>
+
+      <div class="game-row">
+        <span class="game-num">II</span>
+        <span class="game-title">Karatuğ Clan</span>
+        <span class="game-note"
+          >Tight-knit group of strategic players. I also build & maintain internal tools.</span
+        >
+      </div>
+      <div class="game-row">
+        <span class="game-num">I</span>
+        <span class="game-title">Mount & Blade II: Bannerlord</span>
+        <span class="game-note">Coordinated multiplayer clan warfare</span>
+      </div>
+      <div class="game-row">
+        <span class="game-num">III</span>
+        <span class="game-title">RimWorld</span>
+        <span class="game-note">Management, chaos, and catastrophic colony decisions</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div appReveal>
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Connect with me</h2>
+    </div>
+    <p class="section-body" appReveal>
+      Interested in collaborating, have a project idea, or just want to chat? Feel free to reach out
+      through any of these channels.
+    </p>
     <div class="links-row" appReveal>
       <a href="https://github.com/shirenist" class="link-pill" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+          />
+        </svg>
         GitHub
       </a>
-      <a href="https://discord.com" class="link-pill" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
-        Discord
+      <a
+        href="discord.com/users/281193048862359553"
+        class="link-pill"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"
+          />
+        </svg>
+        Discord: Shirenist
       </a>
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
-  <footer>
-    <span class="footer-sig">shirenist <span>·</span> all rights reserved</span>
-    <span class="footer-mono">©2025</span>
-  </footer>
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div appReveal>
+      <p class="section-label">My Work</p>
+      <h2 class="section-title">Recent Projects</h2>
+    </div>
+    <p class="section-body" appReveal>
+      Here's what I've been working on. Each project represents a solution to a real problem.
+    </p>
+    <div class="project-list">
+      <div class="project-item" appReveal>
+        <div class="project-name">
+          <span> BMM: Bannerlord Member Manager </span>
 
+          <a href="https://bmm-fe.vercel.app/"> Website </a>
+        </div>
+        <div class="project-desc">
+          A full-stack clan management dashboard built for coordinated gaming communities. Features
+          include Discord integration, real-time attendance tracking, member analytics, streak
+          calculations, and automated notifications. Built with Angular and Node.js backend with
+          PostgreSQL.
+        </div>
+        <div class="project-meta">
+          <span class="project-tag">active</span>
+          <span class="project-tag">Angular</span>
+          <span class="project-tag">Node.js</span>
+          <span class="project-tag">Discord API</span>
+        </div>
+      </div>
+      <div class="project-item" appReveal>
+        <div class="project-name">Personal Portfolio Website</div>
+        <div class="project-desc">
+          This very website you're looking at. A responsive Angular application deployed on GitHub
+          Pages with custom cursor tracking, ambient animations, and scroll-triggered reveals.
+          Features a moody winter aesthetic with real-time snow drift effects.
+        </div>
+        <div class="project-meta">
+          <span class="project-tag">live</span>
+          <span class="project-tag">Angular</span>
+          <span class="project-tag">SCSS</span>
+          <span class="project-tag">GitHub Pages</span>
+        </div>
+      </div>
+      <div class="project-item" appReveal>
+        <div class="project-name">Home Infrastructure Setup</div>
+        <div class="project-desc">
+          Self-hosted network infrastructure with a Router, DNS-over-HTTPS, advanced QoS tuning, and
+          multi-stage water filtration systems, probably you are not interested in that but
+          anyyyways.... I write it all here because infrastructure is also engineering, even when
+          it's at home. My wife says so.
+        </div>
+        <div class="project-meta">
+          <span class="project-tag">ongoing</span>
+          <span class="project-tag">Linux</span>
+          <span class="project-tag">Networking</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STACK ── -->
+  <section id="stack">
+    <div appReveal>
+      <p class="section-label">Tech Stack</p>
+      <h2 class="section-title">Tools I work with</h2>
+    </div>
+    <p class="section-body" appReveal>
+      I'm comfortable across the full stack, with a focus on robust backend systems and intuitive
+      frontend experiences.
+    </p>
+    <div class="tag-grid" appReveal>
+      <span class="tag highlight">Angular</span>
+      <span class="tag highlight">TypeScript</span>
+      <span class="tag highlight">Node.js</span>
+      <span class="tag highlight">Express</span>
+      <span class="tag">React</span>
+      <span class="tag">RxJS</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Discord API</span>
+      <span class="tag">REST APIs</span>
+      <span class="tag">Docker</span>
+      <span class="tag">Linux</span>
+      <span class="tag">Git</span>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div appReveal>
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">Who I am</h2>
+    </div>
+    <p class="section-body reveal" appReveal>
+      I'm a full-stack developer from Eastern Europe who specializes in building tools and
+      dashboards that solve real problems for communities. I have a passion for automation, clean
+      architecture, and making complex systems accessible.
+    </p>
+    <p class="section-body delay-1" appReveal>
+      When I'm not writing TypeScript or debugging network issues, you'll find me in a coordinated
+      warfare in Mount & Blade: Bannerlord, managing a doomed RimWorld colony, or tinkering with
+      home infrastructure and self-hosted solutions.
+    </p>
+  </section>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll up to explore</span>
+    </div>
+    <p class="hero-eyebrow">Builder • Tinkerer • Community Keeper</p>
+    <h1 class="hero-name">Shiren<span>ist</span></h1>
+    <p class="hero-tagline">
+      I build tools and infrastructure that make communities thrive. Full-stack developer. Medieval
+      battlefield strategist. Rimworld catastrophe enthusiast.
+    </p>
+  </section>
 </main>

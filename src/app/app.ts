@@ -7,6 +7,7 @@ import {
   PLATFORM_ID,
   ViewChild,
   ElementRef,
+  AfterViewInit,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { AudioService } from './shared/services/audio.service';
@@ -19,7 +20,7 @@ import { HomeComponent } from './core/pages/home/home';
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   cursorBig = false;
   trailX = -100;
   trailY = -100;
@@ -38,7 +39,24 @@ export class AppComponent implements OnInit, OnDestroy {
     @Inject(PLATFORM_ID) private platformId: object,
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      // Prevent body overflow initially to avoid content flashing
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      // Wait a tiny bit for DOM to settle, then scroll to bottom
+      setTimeout(() => {
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        window.scrollTo(0, maxScroll);
+        // Re-enable scrolling after position is set
+        document.body.style.overflow = 'auto';
+      }, 100);
+    }
+  }
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(e: MouseEvent) {
